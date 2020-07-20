@@ -12,7 +12,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.ldcovid19project.HealthCareActivity;
 import com.ldcovid19project.MedicalStoresActivity;
 import com.ldcovid19project.OrphanageSupport.FreeFoodActivity;
 import com.ldcovid19project.TollNumbersActivity;
@@ -29,7 +28,6 @@ import com.ldcovid19project.OnlineEducationActivity;
 import com.ldcovid19project.OrphanageSupportActivity;
 import com.ldcovid19project.R;
 import com.ldcovid19project.TestLabsActivity;
-import com.ldcovid19project.TweetsActivity;
 import com.ldcovid19project.VolunteersActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -102,7 +100,8 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ImageViewHolde
                                 break;
 
                             case 4:
-                                Intent healthcareintent = new Intent(mContext, HealthCareActivity.class);
+                                Intent healthcareintent = new Intent(Intent.ACTION_VIEW);
+                                healthcareintent.setData(Uri.parse(jsons.getHealth_cares()));
                                 mContext.startActivity(healthcareintent);
                                 break;
 
@@ -163,19 +162,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ImageViewHolde
                                 educationintent.putExtra("vc",jsons.getVocational_education());
                                 mContext.startActivity(educationintent);
                                 break;
-
                             case 16:
-                                Intent intent20 = new Intent(Intent.ACTION_VIEW);
-                                intent20.setData(Uri.parse(jsons.getGo()));
-                                mContext.startActivity(intent20);
-                                break;
-
-                            case 17:
-                                Intent tweetintent = new Intent(mContext, TweetsActivity.class);
-                                tweetintent.putExtra("url", jsons.getTweets());
-                                mContext.startActivity(tweetintent);
-                                break;
-                            case 18:
                                 Intent faqintent = new Intent(mContext, FAQsActivity.class);
                                 faqintent.putExtra("url", jsons.getFaq());
                                 mContext.startActivity(faqintent);

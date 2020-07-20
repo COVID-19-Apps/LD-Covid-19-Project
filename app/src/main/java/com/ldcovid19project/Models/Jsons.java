@@ -2,14 +2,14 @@ package com.ldcovid19project.Models;
 
 public class Jsons {
 
-    String videos, home_treatment_images, home_treatment_links, toll_numbers, lab_test, donate,
-            tweets, faq, epass, tracker, migrant, corona, cbse, vocational_education, go;
+    String health_cares, home_treatment_images, home_treatment_links, toll_numbers, lab_test, donate,
+            tweets, faq, epass, migrant, corona, cbse, vocational_education, go;
 
     public Jsons() {
     }
 
-    public Jsons(String videos, String home_treatment_images, String home_treatment_links, String toll_numbers, String lab_test, String donate, String tweets, String faq, String epass, String tracker, String migrant, String corona, String cbse, String vocational_education, String go) {
-        this.videos = videos;
+    public Jsons(String health_cares, String home_treatment_images, String home_treatment_links, String toll_numbers, String lab_test, String donate, String tweets, String faq, String epass, String migrant, String corona, String cbse, String vocational_education, String go) {
+        this.health_cares = health_cares;
         this.home_treatment_images = home_treatment_images;
         this.home_treatment_links = home_treatment_links;
         this.toll_numbers = toll_numbers;
@@ -18,7 +18,6 @@ public class Jsons {
         this.tweets = tweets;
         this.faq = faq;
         this.epass = epass;
-        this.tracker = tracker;
         this.migrant = migrant;
         this.corona = corona;
         this.cbse = cbse;
@@ -26,12 +25,12 @@ public class Jsons {
         this.go = go;
     }
 
-    public String getVideos() {
-        return videos;
+    public String getHealth_cares() {
+        return health_cares;
     }
 
-    public void setVideos(String videos) {
-        this.videos = videos;
+    public void setHealth_cares(String health_cares) {
+        this.health_cares = health_cares;
     }
 
     public String getHome_treatment_images() {
@@ -96,14 +95,6 @@ public class Jsons {
 
     public void setEpass(String epass) {
         this.epass = epass;
-    }
-
-    public String getTracker() {
-        return tracker;
-    }
-
-    public void setTracker(String tracker) {
-        this.tracker = tracker;
     }
 
     public String getMigrant() {
